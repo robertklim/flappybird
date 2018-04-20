@@ -1,19 +1,18 @@
 function Pipe() {
 
-    let spacing = random(50, height / 4);
+    let spacing = random(64, height / 4);
     let centery = random(spacing, height - spacing);
 
     this.top = centery - spacing / 2;
     this.bottom = height - (centery + spacing / 2);
     this.x = width;
-    this.w = 30;
+    this.w = 32;
     this.speed = 2;
-
     this.highlight = false;
 
     this.hits = function(bird) {
-        if (bird.y < this.top || bird.y > height - this.bottom) {
-            if (bird.x > this.x && bird.x < this.x + this.w) {
+        if (bird.y - bird.fatness / 2 < this.top || bird.y + bird.fatness / 2 > height - this.bottom) {
+            if (bird.x + bird.fatness / 2 > this.x && bird.x - bird.fatness / 2 < this.x + this.w) {
                 this.highlight = true;
                 return true;
             }

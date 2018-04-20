@@ -1,15 +1,15 @@
 function Bird() {
     this.x = 25;
     this.y = height / 2;
-
-    this.gravity = 0.6;
-    this.lift = -15;
+    this.fatness = 32;
+    this.gravity = 0.7;
+    this.lift = -13;
     this.velocity = 0;
 
     this.show = function() {
         noStroke();
         fill(255);
-        ellipse(this.x, this.y, 32, 32);
+        ellipse(this.x, this.y, this.fatness, this.fatness);
     }
 
     this.up = function() {
