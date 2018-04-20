@@ -7,6 +7,7 @@ function Bird() {
     this.velocity = 0;
 
     this.show = function() {
+        noStroke();
         fill(255);
         ellipse(this.x, this.y, 32, 32);
     }
