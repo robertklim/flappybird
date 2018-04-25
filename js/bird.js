@@ -3,7 +3,7 @@ function Bird() {
     this.y = height / 2;
     this.fatness = 32;
     this.gravity = 0.7;
-    this.lift = -13;
+    this.lift = -14;
     this.velocity = 0;
 
     this.show = function() {

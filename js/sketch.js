@@ -10,7 +10,7 @@ let clapping = false;
 function setup() {
     createCanvas(600, 600);
     mic = new p5.AudioIn();
-    mic.start();
+    //mic.start();
     bird = new Bird();
     pipes.push(new Pipe());
     sliderTop = createSlider(0, 1, 0.3, 0.01);
@@ -25,6 +25,8 @@ function draw() {
     for (let i = pipes.length-1; i >= 0; i--) {
         pipes[i].show();
         pipes[i].update();
+
+        //console.log(pipes[i].hits(bird));
 
         if (pipes[i].hits(bird)) {
             console.log("HIT!");
