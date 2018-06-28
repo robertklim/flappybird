@@ -13,8 +13,8 @@ function setup() {
     //mic.start();
     bird = new Bird();
     pipes.push(new Pipe());
-    sliderTop = createSlider(0, 1, 0.3, 0.01);
-    sliderBottom = createSlider(0, 1, 0.1, 0.01);
+    // sliderTop = createSlider(0, 1, 0.3, 0.01);
+    // sliderBottom = createSlider(0, 1, 0.1, 0.01);
 }
 
 function draw() {
@@ -44,32 +44,32 @@ function draw() {
         pipes.push(new Pipe());
     }
 
-    let thresholdTop = sliderTop.value();
-    let thresholdBottom = sliderBottom.value();
+    // let thresholdTop = sliderTop.value();
+    // let thresholdBottom = sliderBottom.value();
 
-    if (vol > thresholdTop && !clapping) {
-        bird.up();
-        clapping = true;
-    }
+    // if (vol > thresholdTop && !clapping) {
+    //     bird.up();
+    //     clapping = true;
+    // }
 
-    if (vol < thresholdBottom) {
-        clapping = false;
-    }
+    // if (vol < thresholdBottom) {
+    //     clapping = false;
+    // }
 
-    noStroke();
-    fill(0, 255, 0);
-    let y = map(vol, 0, 1, height, 0);
-    rect(width - 50, y, 50, height - y);
+    // noStroke();
+    // fill(0, 255, 0);
+    // let y = map(vol, 0, 1, height, 0);
+    // rect(width - 50, y, 50, height - y);
 
-    let ty = map(thresholdTop, 0, 1, height, 0);
-    stroke(255, 0, 0);
-    strokeWeight(4);
-    line(width - 50, ty, width, ty);
+    // let ty = map(thresholdTop, 0, 1, height, 0);
+    // stroke(255, 0, 0);
+    // strokeWeight(4);
+    // line(width - 50, ty, width, ty);
 
-    let by = map(thresholdBottom, 0, 1, height, 0);
-    stroke(0, 0, 255);
-    strokeWeight(4);
-    line(width - 50, by, width, by);
+    // let by = map(thresholdBottom, 0, 1, height, 0);
+    // stroke(0, 0, 255);
+    // strokeWeight(4);
+    // line(width - 50, by, width, by);
 
 }
 
